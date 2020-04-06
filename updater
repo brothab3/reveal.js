@@ -1,0 +1,4 @@
+#!/bin/bash -x
+cd /var/www/html/reveal.js
+sudo git pull
+
