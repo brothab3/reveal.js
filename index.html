@@ -1,14 +1,23 @@
 <!doctype html>
 <html>
+<style>
+			.slide-split{
+				column-count: 2;
+			}
+			.flex-container {
+				display: flex;
+				align-content: center;
+			}
+		</style>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>winston</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/serif.css">
+		<link rel="stylesheet" href="css/theme/league.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -25,7 +34,20 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section><h2>Technical Content Trainer</h2> <br>  <h3>Presentation</h3></h1></section>
+				<section><h2>Intro to Amazon Transcribe, Translate, and Polly</h2> <br>  <h3>New Sellers Workshop</h3></h1></section>
+				<section><h2>Hello, AWS!</h2><br><br>
+					<section>
+						<div class="slide-split" align="left">
+							<div><img src="images/profile-pic.png"></div>
+							<div></div>
+							<div align="center">
+								<p class="fragment fragment fade-in">Winston Gardner</p>
+								<p class="fragment fragment fade-in">Augusta, Ga</p>
+								<p class="fragment fragment fade-in">AWS Certified</p>
+							</div>
+						</div>
+					</section>
+				</section>
 				<section><h2>Agenda</h2>
 				<br>
 				Introduction <br>
@@ -33,9 +55,80 @@
 				Demo <br>
 
 				</section>
-				<section> 
-				Add AWS Intro Video Here
+			
+	<section>
+					<div class="flex-container">
+						<img src="images/kfc-polly-voice.png">
+					</div>
+					<div><audio src="https://aws-ml-blog.s3.amazonaws.com/polly/KFC_SpeechSample_Joke.mp3?_=7" controls></audio></div>
 				</section>
+				<section><h2>Amazon Transcribe</h2><br><br>
+					<section>
+						<div class="slide-split" align="center">
+							<div><img src="images/transcribe.png"></div>
+							<div></div>
+							<div align="center">
+								<p class="fragment fragment fade-in">transcribe 1</p>
+								<p class="fragment fragment fade-in">transcribe 2</p>
+								<p class="fragment fragment fade-in">transcribe 3</p>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section>
+					
+					<div class="flex-container">
+						<div><p>Subtitling videos accurately and easily with CaptionHub and AWS</p></div>
+						<!-- 
+							<div><img src="images/captionhub2.png"></div>
+						<div><img src="images/captionhub3.png"></div>
+						-->
+						
+					</div>
+					<div><img src="images/transcribe-captionhub.png" width=70% height="70%"></div>
+				</section>
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<section><h3>Using AWS CLI</h3><br>
+					
+					
+						<p>Upload Files to S3</p>
+						<pre><code class="hljs" data-trim data-line-numbers="4|9|4,8-11">
+	
+						aws s3 cp jassy-transcribe.mp4 s3://winston.cloud
+						</code></pre> <br>
+						
+						<p>Translate Text</p>
+						<pre><code class="hljs" data-trim data-line-numbers="4|9|4,8-11">
+							aws translate translate-text --text Hello! --source-language-code en --target-language-code es --output table
+						</code> </pre>
+					
+					</section>
+					<section>Add Slide</section>
+					<section>Add Slide</section>
+					<section>Add Slide</section>
+					<section>Add Slide</section>
+					<section>Add Slide</section>
 				<section><h2>What is AWS</h2>
 				
 				<section>Worlds most comprehensive and broadly adopted cloud platform <br></section>
